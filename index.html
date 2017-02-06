@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+
+        <title>Acronymizer!</title>
+
+        <style>
+            .text-muteder { color: #BBB; }/* Shut up, I am very good vocabulary */
+            #cont {
+                display: flex;
+                flex-flow: column;
+            }
+        </style>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome (for the icons that don't come with Bootstrap) -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Acronymizer!</h1>
+            <p>Type in a word or some letters, and watch as it generates a random acronym!</p>
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" id="input" placeholder="EX: NPM, GitHub, BootStrap">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg" id="generate">Generate!</button><br />
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Include explicit words? (NSFW)
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container-fluid text-center" id="cont">
+            <h2 id="letters"></h2>
+            <div id="words"></div>
+        </div>
+
+
+
+        <!-- Scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/acronymize.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

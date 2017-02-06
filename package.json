@@ -1,0 +1,22 @@
+{
+  "name": "acronymizer",
+  "version": "0.0.1",
+  "description": "Type in some letters or word(s) and watch it generate an acronym!",
+  "main": "server.js",
+  "scripts": {
+      "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeechapman/Acronymizer.git"
+  },
+  "author": "Zachary A. Chapman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeechapman/Acronymizer/issues"
+  },
+  "homepage": "https://github.com/zeechapman/Acronymizer#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}

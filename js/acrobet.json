@@ -1,0 +1,30 @@
+{
+    "mild": {
+        "a":["Alphabet", "Alpha", "Analytic", "Analyze", "Acrobat", "Apple", "Amphibian", "Aquatic", "Astro", "Astrological", "Accurate", "Actor", "Acting", "Angular", "Agile", "Aspect", "Affect", "Asphyxiation", "Animated", "Ant", "Art", "Adding", "Again", "Aid", "Arc", "Acidic", "Artic", "Allocated"],
+        "b":["Boston", "Bottom", "Beat", "Bark", "Bootstrap", "Bicycle", "Bickering", "Board", "Bored", "Best", "Better", "Beautiful", "Beauty", "Beast", "Boot", "Bike", "Bipedal", "Bland", "Blank", "Blow", "Big", "Bump", "Beef", "Beta", "Bear", "Born", "Black", "Baked", "Barf", "Bwaaah", "Bacon", "Brush", "Broken", "Bought"],
+        "c":["Combat", "Cop", "Car", "Crust", "Cruise", "Communicate", "Connected", "Cut", "Cat", "Corrected", "Career", "Cynical" , "Cesspool", "Cell", "Cellular", "Conjoined", "Chewy", "Crunchy", "Coronated", "Cooperative", "Calm", "Crazy", "Chase", "Canned", "Collect", "Cash"],
+        "d":["Door", "Delete", "Dock", "Dill", "Damaged", "Decorative", "Downward", "Demote", "Demoralize", "Dead", "Data", "Dork", "Demonic", "Dedicated", "Destination", "Destiny", "Delicious", "Directional", "Day", "Dawn", "Daze", "Dizzy", "Dusty", "Don't", "Dairy", "Drizzled", "Delicate", "Dash"],
+        "e":["Enumerated", "Eliptical", "Elite", "Extra", "Eat", "Eating", "Ear", "Elk", "Elastic", "Electric", "Exaggerated", "Excited", "Exhaulted", "Exile", "Eww", "Eaten", "Eccentric", "Erected", "Esteemed", "Established", "Error", "Err", "Eliptic", "Exit", "Eel", "Entitled", "Erratic"],
+        "f":["Fun", "Fire", "Filling", "Finding", "Found", "Fortified", "Fill", "Fix", "Fixing", "Flip", "Fit", "Fathom", "Fried", "Fork", "Fake", "Failed", "Flattened", "False", "Flailing", "For", "Four", "Finger", "Food", "Fall"],
+        "g":["Guided", "Gilded", "Gun", "Gold", "Glove", "Gust", "Gel", "Gelatin", "Gosh"],
+        "h":["Hell", "Hello", "Horse", "Hill", "Hiku", "Hemoglobin", "Holy", "Horrifying", "Horror", "Hack", "Hellbent", "High", "Hitched", "Hilarious"],
+        "i":["Information", "Intelligence", "Inform", "Ideal", "Idea", "Intertwined", "Illegal", "Ill", "I", "Instead", "Intended", "Irregular", "Irratated", "Irate"],
+        "j":["Jello", "Jump", "Justify", "Justification", "Jam", "Jet"],
+        "k":["Kill", "Kombat", "Kite", "Karaoke", "Keepsake", "Kale", "Kickoff", "Knitting", "Kamehameha", "Kilt", "Knockoff"],
+        "l":["Lame", "Lingering", "Lentil", "Like", "Lift", "Lyft", "Lord", "Lemon", "Lizard", "Lounge", "Light", "Lit", "Less", "Loose"],
+        "m":["Mom", "Morph", "Mock", "Murder", "Marry", "Merry", "Mud", "Machine"],
+        "n":["Number", "Nintendo", "New", "Neo", "Nordic"],
+        "o":["Orangutan", "Orange", "Olive", "Old"],
+        "p":["Push", "Pull", "Pop", "Pork", "Philantrhopic", "Pen", "Pin", "Pencil"],
+        "q":["Quote", "Quota", "Quiz", "Queue", "Quartz"],
+        "r":["Rumble", "Rippled", "Ripped", "Run", "Raggy", "Rag", "Real"],
+        "s":["Super", "Superb", "Sucks", "Still", "Sloppy", "Slope", "Slick", "Silly", "Salmon"],
+        "t":["Terrible", "Turning", "Treason", "Toppled", "Thirty", "Twenty", "Ten", "Thousand", "Tenth"],
+        "u":["Uranium", "Under", "Underappreciated", "U-Haul", "Ummm", "Ugly"],
+        "v":["Vermillion", "Virgil", "Virgin", "Vegan", "Vegetable", "Vertical"],
+        "w":["Word", "West", "When", "War", "Work", "Went"],
+        "x":["Xylophone", "Xenomorph", "Xerox"],
+        "y":["You", "Your", "You're", "Yummy", "Yogurt"],
+        "z":["Zeno", "Zillion", "Zit", "Zerg"]
+    }
+}
