@@ -9,6 +9,7 @@
 
         <style>
             .text-muteder { color: #BBB; }/* Shut up, I am very good vocabulary */
+            .container-added { margin-bottom: 10px; }
             #cont {
                 display: flex;
                 flex-flow: column;
@@ -33,7 +34,7 @@
                     <button type="button" class="btn btn-primary btn-lg" id="generate">Generate!</button><br />
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox"> Include explicit words? (NSFW)
+                            <input type="checkbox" id="nsfw"> Include explicit words? (NSFW)
                         </label>
                     </div>
                 </form>
@@ -45,7 +46,11 @@
             <div id="words"></div>
         </div>
 
-
+        <footer class="footer navbar-fixed-bottom">
+            <div class="container well">
+                <a target="_blank" href="https://github.com/zeechapman/Acronymizer" class="btn btn-primary"><i class="fa fa-github" aria-hidden="true"></i> Check out on Github</a>
+            </div>
+        </footer>
 
         <!-- Scripts -->
         <script src="js/jquery-3.1.1.min.js"></script>
