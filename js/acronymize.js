@@ -1,29 +1,57 @@
-//TODO: Check if there's a lot of words (less than 5 maybe).  If no words are detected, do a character count (can't have it too big)
+//TODO: Make up mind if it's going to be called "explicit", "sailor mouth", or "dirty words"
 
 // Get the elements
+var container = $("#cont");
 var topCont = $("#letters");
 var bottomCont = $("#words");
+var checkbox = $("#nsfw");
+
+var dirty = false; // By default, have the option to include explicit words be false
+
+
+// Attributes
+var attrNormal = "container-fluid text-center";
+var attrAlert = "container-fluid text-center bg-warning";
 
 var acrobet;  // Acronym Alphabet
 $.getJSON('/js/acrobet.json', function(d) {
     acrobet = d;
 });
 
-
-
 /**
-  * Take the input, and turn it into an acronym
+  * Take the input, and turn it into an acronym, and associate a word to each letter
   */
 function acronymize(inp) {
-    var len = inp.val().length;
-    var chars = inp.val().toLowerCase().split('');
-    var i = 0;
+    var len = inp.val().length; // Length of input
+    var chars = inp.val().toLowerCase().split(''); // Take each character from the input, and put into an array
+    var i = 0; // Used in for loop
 
-    bottomCont.html('');
+    topCont.html('');    // Empty out
+    bottomCont.html(''); // everything
 
-    topCont.html('<h1>' + inp.val() + '</h1>');
-    for (i; i < len; i++) {
-        if (chars[i] !== ' ') {
+    // If there's only two characters or less, let them know they're wrong
+    if (inp.val().length < 2) {
+        container.attr('class', attrAlert);
+        topCont.append("Not enough characters!");
+    }
+
+    // If there's up to 35 characters or more, then scream and slap the user pn the hand
+    else if (inp.val().length > 35) {
+        container.attr('class', attrAlert);
+        topCont.append("Too long, too long!!");
+    }
+
+    // Use RegEx to check for any symbols, and spaces.  Only characters allowed!
+    else if (/^[a-zA-Z]*$/.test(inp.val()) == false) {
+        container.attr('class', attrAlert);
+        topCont.append("Sorry, symbols and numbers are not allowed");
+    }
+
+    // ...is...is it gone?  Good, proceed like nothing happened
+    else {
+        container.attr('class', attrNormal);
+        topCont.html('<h1>' + inp.val() + '</h1>');
+        for (i; i < len; i++) {
             bottomCont.append(letterCheck(chars[i]) + " ");
         }
     }
@@ -36,104 +64,70 @@ function randomNum(num) {
     return Math.floor(Math.random() * num);
 }
 
+/**
+  * Based on which option is checked, include or
+  * don't include the "dirty" words
+  */
+function cleanOrDirty() {
+    if (checkbox.prop('checked')) {
+        dirty = true;
+    } else {
+        dirty = false;
+    }
+}
 
 /**
   * They say in order to get a job, you need experience.
   * But in order to get experience, you need a job.
   * Or just learn from your mistakes.
-  * I hope one day I can figure out a better way to do this than...this...
+  * If this is a terrible method to achieve what I need, then please don't let this reflect me overall.
+  * I know there's a better way, I just don't know what yet.
   */
 function letterCheck(char) {
+
+    var acroMild = acrobet.mild;
+    var acroExplicit = acrobet.explicit;
+    var acro = acroMild; // By default, only use the mild words
+
+    var ran = randomNum(4); // Chosing a random number between 0 and 3
+
+    cleanOrDirty();
+
+    // If checkmarked, then run this
+    if (dirty == true) {
+        if (ran == 3) { // If the number rolled is 3, then it's sailor mouth time
+            acro = acroExplicit;
+        }
+    }
+
     switch (char) {
-        case 'a':
-            return acrobet.mild.a[randomNum(acrobet.mild.a.length)];
-
-        case 'b':
-            return acrobet.mild.b[randomNum(acrobet.mild.b.length)];
-
-        case 'c':
-            return acrobet.mild.c[randomNum(acrobet.mild.c.length)];
-
-        case 'd':
-            return acrobet.mild.d[randomNum(acrobet.mild.d.length)];
-
-        case 'e':
-            return acrobet.mild.e[randomNum(acrobet.mild.e.length)];
-
-        case 'f':
-            return acrobet.mild.f[randomNum(acrobet.mild.f.length)];
-
-        case 'g':
-            return acrobet.mild.g[randomNum(acrobet.mild.g.length)];
-
-        case 'h':
-            return acrobet.mild.h[randomNum(acrobet.mild.h.length)];
-
-        case 'i':
-            return acrobet.mild.i[randomNum(acrobet.mild.i.length)];
-
-        case 'j':
-            return acrobet.mild.j[randomNum(acrobet.mild.j.length)];
-
-        case 'k':
-            return acrobet.mild.k[randomNum(acrobet.mild.j.length)];
-
-        case 'l':
-            return acrobet.mild.l[randomNum(acrobet.mild.l.length)];
-
-        case 'm':
-            return acrobet.mild.m[randomNum(acrobet.mild.m.length)];
-
-        case 'n':
-            return acrobet.mild.n[randomNum(acrobet.mild.n.length)];
-
-        case 'o':
-            return acrobet.mild.o[randomNum(acrobet.mild.o.length)];
-
-        case 'p':
-            return acrobet.mild.p[randomNum(acrobet.mild.p.length)];
-
-        case 'q':
-            return acrobet.mild.q[randomNum(acrobet.mild.q.length)];
-
-
-        case 'r':
-            return acrobet.mild.r[randomNum(acrobet.mild.r.length)];
-
-
-        case 's':
-            return acrobet.mild.s[randomNum(acrobet.mild.s.length)];
-
-
-        case 't':
-            return acrobet.mild.t[randomNum(acrobet.mild.t.length)];
-
-
-        case 'u':
-            return acrobet.mild.u[randomNum(acrobet.mild.u.length)];
-
-
-        case 'v':
-            return acrobet.mild.v[randomNum(acrobet.mild.v.length)];
-
-
-        case 'w':
-            return acrobet.mild.w[randomNum(acrobet.mild.w.length)];
-
-
-        case 'x':
-            return acrobet.mild.x[randomNum(acrobet.mild.x.length)];
-
-
-        case 'y':
-            return acrobet.mild.y[randomNum(acrobet.mild.y.length)];
-
-
-        case 'z':
-            return acrobet.mild.z[randomNum(acrobet.mild.z.length)];
-
-        default:
-            break;
+        case 'a': return acro.a[randomNum(acro.a.length)];
+        case 'b': return acro.b[randomNum(acro.b.length)];
+        case 'c': return acro.c[randomNum(acro.c.length)];
+        case 'd': return acro.d[randomNum(acro.d.length)];
+        case 'e': return acro.e[randomNum(acro.e.length)];
+        case 'f': return acro.f[randomNum(acro.f.length)];
+        case 'g': return acro.g[randomNum(acro.g.length)];
+        case 'h': return acro.h[randomNum(acro.h.length)];
+        case 'i': return acro.i[randomNum(acro.i.length)];
+        case 'j': return acro.j[randomNum(acro.j.length)];
+        case 'k': return acro.k[randomNum(acro.j.length)];
+        case 'l': return acro.l[randomNum(acro.l.length)];
+        case 'm': return acro.m[randomNum(acro.m.length)];
+        case 'n': return acro.n[randomNum(acro.n.length)];
+        case 'o': return acro.o[randomNum(acro.o.length)];
+        case 'p': return acro.p[randomNum(acro.p.length)];
+        case 'q': return acro.q[randomNum(acro.q.length)];
+        case 'r': return acro.r[randomNum(acro.r.length)];
+        case 's': return acro.s[randomNum(acro.s.length)];
+        case 't': return acro.t[randomNum(acro.t.length)];
+        case 'u': return acro.u[randomNum(acro.u.length)];
+        case 'v': return acro.v[randomNum(acro.v.length)];
+        case 'w': return acro.w[randomNum(acro.w.length)];
+        case 'x': return acro.x[randomNum(acro.x.length)];
+        case 'y': return acro.y[randomNum(acro.y.length)];
+        case 'z': return acro.z[randomNum(acro.z.length)];
+        default: break;
 
     }
 }
