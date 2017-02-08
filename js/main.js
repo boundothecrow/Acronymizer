@@ -11,5 +11,3 @@ $(function() {
     });
 
 });
-
-// TODO: Check for length of input
