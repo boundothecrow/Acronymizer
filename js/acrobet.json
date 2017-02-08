@@ -26,5 +26,10 @@
         "x":["Xylophone", "Xenomorph", "Xerox"],
         "y":["You", "Your", "You're", "Yummy", "Yogurt"],
         "z":["Zeno", "Zillion", "Zit", "Zerg"]
+    },
+    "explicit": {
+        "a":["Ass", "Arse", "Asshole"],
+        "b":["Bollocks", "Butt", "Butthole", "Bitches", "Biggot"],
+        "c":["Cock", "Cunt", "Clitoris"]
     }
 }
