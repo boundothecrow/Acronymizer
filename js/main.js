@@ -12,13 +12,4 @@ $(function() {
 
 });
 
-
-/*
-    For my own reference: I found this on StackOverflow
-
-    for (var i = 0, len = str.length; i < len; i++) {
-        alert(str[i]);
-    }
-
-    So I can take each letter and split the strings
-*/
+// TODO: Check for length of input
