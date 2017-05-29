@@ -1,5 +1,3 @@
-//TODO: Make up mind if it's going to be called "explicit", "sailor mouth", or "dirty words"
-
 // Get the elements
 var container = $("#cont");
 var topCont = $("#letters");
@@ -35,7 +33,7 @@ function acronymize(inp) {
         topCont.append("Not enough characters!");
     }
 
-    // If there's up to 35 characters or more, then scream and slap the user pn the hand
+    // If there's up to 35 characters or more, then scream and slap the user on the hand
     else if (inp.val().length > 35) {
         container.attr('class', attrAlert);
         topCont.append("Too long, too long!!");
@@ -58,7 +56,7 @@ function acronymize(inp) {
 }
 
 /**
-  * Ranom number
+  * Random number
   */
 function randomNum(num) {
     return Math.floor(Math.random() * num);
@@ -66,7 +64,7 @@ function randomNum(num) {
 
 /**
   * Based on which option is checked, include or
-  * don't include the "dirty" words
+  * don't include the explicit words
   */
 function cleanOrDirty() {
     if (checkbox.prop('checked')) {
@@ -89,17 +87,16 @@ function letterCheck(char) {
     var acroExplicit = acrobet.explicit;
     var acro = acroMild; // By default, only use the mild words
 
-    var ran = randomNum(4); // Chosing a random number between 0 and 3
+    var ran = randomNum(6); // Chosing a random number between 0 and 5
 
     cleanOrDirty();
 
     // If checkmarked, then run this
     if (dirty == true) {
-        if (ran == 3) { // If the number rolled is 3, then it's sailor mouth time
+        if (ran == 5) { // If the number rolled is 5, then it's sailor mouth time
             acro = acroExplicit;
         }
     }
-
     switch (char) {
         case 'a': return acro.a[randomNum(acro.a.length)];
         case 'b': return acro.b[randomNum(acro.b.length)];
@@ -111,7 +108,7 @@ function letterCheck(char) {
         case 'h': return acro.h[randomNum(acro.h.length)];
         case 'i': return acro.i[randomNum(acro.i.length)];
         case 'j': return acro.j[randomNum(acro.j.length)];
-        case 'k': return acro.k[randomNum(acro.j.length)];
+        case 'k': return acro.k[randomNum(acro.k.length)];
         case 'l': return acro.l[randomNum(acro.l.length)];
         case 'm': return acro.m[randomNum(acro.m.length)];
         case 'n': return acro.n[randomNum(acro.n.length)];
@@ -127,7 +124,6 @@ function letterCheck(char) {
         case 'x': return acro.x[randomNum(acro.x.length)];
         case 'y': return acro.y[randomNum(acro.y.length)];
         case 'z': return acro.z[randomNum(acro.z.length)];
-        default: break;
-
+        default: break; // There's a 99.9999999999999999% chance of this happening, I'm sure
     }
 }
