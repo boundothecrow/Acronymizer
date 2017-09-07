@@ -1,5 +1,3 @@
-// The page that runs the script...wait...
-
 // Calling Jake Wearey
 $(function() {
     // Variables
