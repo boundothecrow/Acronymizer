@@ -1,3 +1,6 @@
+# ⚠️ OLD PROJECT ⚠️
+Instead of hiding my shame and deleting the repo I am going to keep it available. I created this back in 2017 when I realized that I need to showcase my skills and I had some free time to do so. This was part of my learning experience on how things like Git and GitHub works, as well as slowly understanding JavaScript more as I originally came from learning C#, Java, and Python. I would hide the overenthusiastic and goofy descriptions I wrote in the README and in most of the code, but I don't want to tamper too much with it, and I don't want to embarass myself.
+
 # Acronymizer
 Input your own series of letters and/or words, and have it spit out an acronym, with colorful choice of vocabulary!
 
